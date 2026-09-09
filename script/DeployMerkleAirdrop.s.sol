@@ -11,7 +11,7 @@ contract DeployMerkleAirdrop is Script {
     uint256 private s_amountToTransfer = 4 * 25 * 1e18;
 
 
-    function deployMerkleAirdrop() external returns (MerkleAirdrop, BagelToken) {
+    function run() external returns (MerkleAirdrop, BagelToken) {
         vm.startBroadcast();
         BagelToken token = new BagelToken();
         MerkleAirdrop airdrop = new MerkleAirdrop(s_merkleRoot,IERC20(address(token)));
