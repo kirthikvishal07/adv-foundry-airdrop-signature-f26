@@ -14,8 +14,7 @@ contract ClaimAirdrop is Script{
     bytes32 PROOF_TWO = 0xe5ebd1e1b5a5478a944ecab36a9a954ac3b6b8216875f6524caa7a1d87096576;
     bytes32[] PROOF = [PROOF_ONE, PROOF_TWO];
     bytes private SIGNATURE = hex"448c7508ff80fb76810292af684c525c224becb058db9b12f3f33bdedc6683a9630418f67f83ef7b8be3f19da62c2b8c6e9413e6e3f2b405f578057f6f58b8c81c";
-    uint256 private temp=0;
-
+    
     error __ClaimAirdropScript_InvalidSignatureLength();
 
     function claimAirdrop(address airdrop) public{
